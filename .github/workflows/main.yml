@@ -1,3 +1,4 @@
+
 on:
   push:
     branches:
@@ -6,7 +7,7 @@ jobs:
   build:
     runs-on: Ubuntu-latest
     steps:
-            - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: " login to dockerhub"
         run: docker login --username ${{ secrets.TOKEN_USER}} --password ${{ secrets.TOKEN_PASSWORD }}
